@@ -125,11 +125,11 @@ This roadmap lays out a comprehensive path from initial development to advanced 
 
 ## State Diagram
 
-![State Diagram](path/to/state_diagram.png)
+![State Diagram](BCDV_4025_Project_State_Diagram.png)
 
 ## Sequence Diagram
 
-![Sequence Diagram](path/to/sequence_diagram.png)
+![Sequence Diagram](BCDV_4025_Project_Sequence_Diagram.png)
 
 ## Git Repositories for the Project
 
