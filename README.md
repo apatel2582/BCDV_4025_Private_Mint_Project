@@ -141,143 +141,144 @@ This roadmap lays out a comprehensive path from initial development to advanced 
 
 ### Terminal 1
 
-`sudo apt update`
+- `sudo apt update`
 
-`sudo apt -y upgrade`
+- `sudo apt -y upgrade`
 
-`sudo apt install curl`
+- `sudo apt install curl`
 
-`sudo apt install git`
+- `sudo apt install git`
 
-`sudo apt update`
+- `sudo apt update`
 
-`sudo apt upgrade`
+- `sudo apt upgrade`
 
-`sudo apt install apt-transport-https ca-certificates gnupg-agent software-properties-common`
+- `sudo apt install apt-transport-https ca-certificates gnupg-agent software-properties-common`
 
-`curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
+- `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
 
-`sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"`
+- `sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"`
 
-`sudo apt update`
+- `sudo apt update`
 
-`sudo apt -y install docker-ce`
+- `sudo apt -y install docker-ce`
 
-`sudo usermod -aG docker <username>`
+- `sudo usermod -aG docker <username>`
 
-`` sudo curl -L https://github.com/docker/compose/releases/download/1.27.4/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose ``
+- `` sudo curl -L https://github.com/docker/compose/releases/download/1.27.4/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose ``
 
-`sudo chmod +x /usr/local/bin/docker-compose`
+- `sudo chmod +x /usr/local/bin/docker-compose`
 
-`git clone https://github.com/hyperledger/fabric-samples.git`
+- `git clone https://github.com/hyperledger/fabric-samples.git`
 
-`cd fabric-samples`
+- `cd fabric-samples`
 
-`curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/bootstrap.sh > bootstrap.sh`
+- `curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/bootstrap.sh > bootstrap.sh`
 
-`chmod u+x bootstrap.sh`
+- `chmod u+x bootstrap.sh`
 
-`sudo ./bootstrap.sh`
+- `sudo ./bootstrap.sh`
 
-`cd test-network`
+- `cd test-network`
 
-`sudo ./network.sh down`
+- `sudo ./network.sh down`
 
-`sudo ./network.sh up createChannel -ca -s couchdb`
+- `sudo ./network.sh up createChannel -ca -s couchdb`
 
-`cd ..`
+- `cd ..`
 
-`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash`
+- `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash`
 
-`source ~/.bashrc`
+- `source ~/.bashrc`
 
-`nvm install 18.0.0`
+- `nvm install 18.0.0`
 
-`git clone https://github.com/apatel2582/private-mint-network.git`
+- `git clone https://github.com/apatel2582/private-mint-network.git`
 
-`cd private-mint-network/`
+- `cd private-mint-network/`
 
-`npm install`
+- `npm install`
 
 ### ORG1 Terminal - Terminal 2
 
-`cd ~`
-`cd fabric-samples/test-network`
-`export CORE_PEER_TLS_ENABLED=true`
-`export CORE_PEER_LOCALMSPID="Org1MSP"`
-`export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt`
-`export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp`
-`export CORE_PEER_ADDRESS=localhost:7051`
-`export PATH=${PWD}/../bin:$PATH`
-`export FABRIC_CFG_PATH=$PWD/../config/`
-`sudo chmod a+rwx -R organizations`  
-`sudo chmod a+rwx -R ../config`  
-`peer channel list`
+- `cd ~`
+- `cd fabric-samples/test-network`
+- `export CORE_PEER_TLS_ENABLED=true`
+- `export CORE_PEER_LOCALMSPID="Org1MSP"`
+- `export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt`
+- `export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp`
+- `export CORE_PEER_ADDRESS=localhost:7051`
+- `export PATH=${PWD}/../bin:$PATH`
+- `export FABRIC_CFG_PATH=$PWD/../config/`
+- `sudo chmod a+rwx -R organizations`
+- `sudo chmod a+rwx -R ../config`
+- `peer channel list`
 
 ### ORG2 Terminal - Terminal 3
 
-`cd ~`
-`cd fabric-samples/test-network`
-`export CORE_PEER_TLS_ENABLED=true`
-`export CORE_PEER_LOCALMSPID="Org2MSP"`
-`export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt`
-`export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp`
-`export CORE_PEER_ADDRESS=localhost:9051`
-`export PATH=${PWD}/../bin:$PATH`
-`export FABRIC_CFG_PATH=$PWD/../config/`
-`peer channel list`
+- `cd ~`
+- `cd fabric-samples/test-network`
+- `export CORE_PEER_TLS_ENABLED=true`
+- `export CORE_PEER_LOCALMSPID="Org2MSP"`
+- `export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt`
+- `export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp`
+- `export CORE_PEER_ADDRESS=localhost:9051`
+- `export PATH=${PWD}/../bin:$PATH`
+- `export FABRIC_CFG_PATH=$PWD/../config/`
+- `peer channel list`
 
 ### Do in both OTHER Terminals (2 and 3)
 
-`peer lifecycle chaincode package private-mint-network.tar.gz --path ../private-mint-network --lang node --label private-mint-network_1.0`
+- `peer lifecycle chaincode package private-mint-network.tar.gz --path ../private-mint-network --lang node --label private-mint-network_1.0`
 
-`peer lifecycle chaincode install private-mint-network.tar.gz`
+- `peer lifecycle chaincode install private-mint-network.tar.gz`
 
 -> this will change depending on the output of the previous command
-`export PACKAGE_ID=private-mint-network_1.0:a33e5169c6b0b5b4d7b99d5eebfd9ca58dde77a27767edc5eed38cd6d32919a9`
 
-`peer lifecycle chaincode queryinstalled`
+- `export PACKAGE_ID=private-mint-network_1.0:a33e5169c6b0b5b4d7b99d5eebfd9ca58dde77a27767edc5eed38cd6d32919a9`
 
-`peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --channelID mychannel --name private-mint-network --version 1.0 --package-id $PACKAGE_ID --sequence 1 --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem`
+- `peer lifecycle chaincode queryinstalled`
 
-`peer lifecycle chaincode checkcommitreadiness --channelID mychannel --name private-mint-network --version 1.0 --sequence 1 --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem --output json`
+- `peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --channelID mychannel --name private-mint-network --version 1.0 --package-id $PACKAGE_ID --sequence 1 --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem`
+
+- `peer lifecycle chaincode checkcommitreadiness --channelID mychannel --name private-mint-network --version 1.0 --sequence 1 --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem --output json`
 
 ### Back to ORG1 - Terminal 2
 
-`peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --channelID mychannel --name private-mint-network --version 1.0 --sequence 1 --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt`
+- `peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --channelID mychannel --name private-mint-network --version 1.0 --sequence 1 --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt`
 
-`peer lifecycle chaincode querycommitted --channelID mychannel --name private-mint-network --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem`
+- `peer lifecycle chaincode querycommitted --channelID mychannel --name private-mint-network --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem`
 
-`peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C mychannel -n private-mint-network --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c '{"function":"upsertWallet","Args":["user1"]}'`
+- `peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C mychannel -n private-mint-network --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c '{"function":"upsertWallet","Args":["user1"]}'`
 
-`peer chaincode query -C mychannel -n private-mint-network -c '{"function":"getWallet","Args":["user1"]}'`
+- `peer chaincode query -C mychannel -n private-mint-network -c '{"function":"getWallet","Args":["user1"]}'`
 
-`peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C mychannel -n private-mint-network --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c '{"function":"cheatAddFakeUSD","Args":["user1", "100"]}'`
+- `peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C mychannel -n private-mint-network --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c '{"function":"cheatAddFakeUSD","Args":["user1", "100"]}'`
 
-`peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C mychannel -n private-mint-network --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c '{"function":"upsertWallet","Args":["user2"]}'`
+- `peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C mychannel -n private-mint-network --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c '{"function":"upsertWallet","Args":["user2"]}'`
 
-`peer chaincode query -C mychannel -n private-mint-network -c '{"function":"getWallet","Args":["user2"]}'`
+- `peer chaincode query -C mychannel -n private-mint-network -c '{"function":"getWallet","Args":["user2"]}'`
 
-`peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C mychannel -n private-mint-network --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c '{"function":"cheatAddFakeUSD","Args":["user2", "100000"]}'`
+- `peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C mychannel -n private-mint-network --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c '{"function":"cheatAddFakeUSD","Args":["user2", "100000"]}'`
 
-`peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C mychannel -n private-mint-network --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c '{"function":"transferFakeUSD","Args":["user2", "user1", "1000"]}'`
+- `peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C mychannel -n private-mint-network --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c '{"function":"transferFakeUSD","Args":["user2", "user1", "1000"]}'`
 
-`peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C mychannel -n private-mint-network --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c '{"function":"purchasePMCoin","Args":["user1", "10"]}'`
+- `peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C mychannel -n private-mint-network --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c '{"function":"purchasePMCoin","Args":["user1", "10"]}'`
 
 ### Backend Terminal - Terminal 4
 
-`cd ~`
-`git clone https://github.com/apatel2582/private-mint-api.git`
-`cd private-mint-api/`
-`npm install`
-`node enrollUser.js 'CAAdmin@org1.example.com' admin adminpw`
-`node registerUser.js 'CAAdmin@org1.example.com' 'User1@org1.example.com' '{"secret": "userpw"}'`
-`node enrollUser.js 'User1@org1.example.com' 'User1@org1.example.com' userpw`
+- `cd ~`
+- `git clone https://github.com/apatel2582/private-mint-api.git`
+- `cd private-mint-api/`
+- `npm install`
+- `node enrollUser.js 'CAAdmin@org1.example.com' admin adminpw`
+- `node registerUser.js 'CAAdmin@org1.example.com' 'User1@org1.example.com' '{"secret": "userpw"}'`
+- `node enrollUser.js 'User1@org1.example.com' 'User1@org1.example.com' userpw`
 
 ### Server-Backend/API - Terminal 5
 
-`cd private-mint-api/`
-`node app.js`
+- `cd private-mint-api/`
+- `node app.js`
 
 ### Back to Backend Terminal - Terminal 4
 
@@ -311,11 +312,11 @@ curl -X POST http://localhost:3001/api/purchasePMCoin \
 
 ### Frontend Terminal - Terminal 6
 
-`cd ~`
-`git clone https://github.com/apatel2582/private-mint-frontend.git`
-`cd private-mint-frontend/`
-`npm install`
-`npm start`
+- `cd ~`
+- `git clone https://github.com/apatel2582/private-mint-frontend.git`
+- `cd private-mint-frontend/`
+- `npm install`
+- `npm start`
 
 ## Results
 
