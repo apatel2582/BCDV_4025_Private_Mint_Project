@@ -38,6 +38,7 @@
     - [Back to Backend Terminal - Terminal 4](#back-to-backend-terminal---terminal-4)
     - [Frontend Terminal - Terminal 6](#frontend-terminal---terminal-6)
   - [Results](#results)
+  - [Demo Video](#demo-video)
     - [Screenshots](#screenshots)
   - [License](#license)
   - [Notes](#notes)
@@ -322,6 +323,12 @@ curl -X POST http://localhost:3001/api/purchasePMCoin \
 ## Results
 
 The application successfully demonstrates the creation and management of digital wallets, secure transactions using smart contracts, and the dynamic interaction between users and the blockchain network. Our testing phase showed a robust and user-friendly platform, ready for further development and real-world application.
+
+## Demo Video
+
+// USe default 0.jpg for the video
+
+- [![Private Mint Demo Video](https://img.youtube.com/vi/01jFbHY07vs/0.jpg)](https://youtu.be/01jFbHY07vs)
 
 ### Screenshots
 
