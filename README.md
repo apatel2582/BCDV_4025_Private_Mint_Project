@@ -38,6 +38,7 @@
     - [Back to Backend Terminal - Terminal 4](#back-to-backend-terminal---terminal-4)
     - [Frontend Terminal - Terminal 6](#frontend-terminal---terminal-6)
   - [Results](#results)
+    - [Screenshots](#screenshots)
   - [License](#license)
   - [Notes](#notes)
 
@@ -321,6 +322,23 @@ curl -X POST http://localhost:3001/api/purchasePMCoin \
 ## Results
 
 The application successfully demonstrates the creation and management of digital wallets, secure transactions using smart contracts, and the dynamic interaction between users and the blockchain network. Our testing phase showed a robust and user-friendly platform, ready for further development and real-world application.
+
+### Screenshots
+
+- ![Screenshot_1](Screenshots/Screenshot_1.png)
+- ![Screenshot_2](Screenshots/Screenshot_2.png)
+- ![Screenshot_3](Screenshots/Screenshot_3.png)
+- ![Screenshot_4](Screenshots/Screenshot_4.png)
+- ![Screenshot_5](Screenshots/Screenshot_5.png)
+- ![Screenshot_6](Screenshots/Screenshot_6.png)
+- ![Screenshot_7](Screenshots/Screenshot_7.png)
+- ![Screenshot_8](Screenshots/Screenshot_8.png)
+- ![Screenshot_9](Screenshots/Screenshot_9.png)
+- ![Screenshot_10](Screenshots/Screenshot_10.png)
+- ![Screenshot_11](Screenshots/Screenshot_11.png)
+- ![Screenshot_12](Screenshots/Screenshot_12.png)
+- ![Screenshot_13](Screenshots/Screenshot_13.png)
+- ![Screenshot_14](Screenshots/Screenshot_14.png)
 
 ## License
 
