@@ -326,8 +326,6 @@ The application successfully demonstrates the creation and management of digital
 
 ## Demo Video
 
-// USe default 0.jpg for the video
-
 - [![Private Mint Demo Video](https://img.youtube.com/vi/01jFbHY07vs/0.jpg)](https://youtu.be/01jFbHY07vs)
 
 ### Screenshots
